@@ -20,7 +20,7 @@ Group:          System/GUI/KDE
 
 URL:            %{forgeurl}
 Source:         %{forgesource}
-Patch0:         %{patch}
+#Patch0:         %{patch}
 
 BuildRequires:  gcc-c++
 BuildRequires:  cmake >= 3.16
