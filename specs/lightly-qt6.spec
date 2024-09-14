@@ -18,7 +18,7 @@ Group:          System/GUI/KDE
 
 URL:            %{forgeurl}
 Source:         %{forgesource}
-Patch0:         add-missing-files.patch
+Patch0:         patches/missing-files.patch
 
 BuildRequires:  gcc-c++
 BuildRequires:  cmake >= 3.16
