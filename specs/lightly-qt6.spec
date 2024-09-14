@@ -7,7 +7,6 @@
 %global forgeurl https://github.com/%{dev}/%{style}
 %global commit b5477fb367a2e9453e9ee10a8d9c1650a69e06be
 %global date 20240914
-%global patch missing-files.patch
 
 %forgemeta
 
@@ -20,7 +19,6 @@ Group:          System/GUI/KDE
 
 URL:            %{forgeurl}
 Source:         %{forgesource}
-#Patch0:         %{patch}
 
 BuildRequires:  gcc-c++
 BuildRequires:  cmake >= 3.16
