@@ -5,7 +5,7 @@
 %global _qt_major_version 6
 
 %global forgeurl https://github.com/%{dev}/%{style}
-%global commit b5477fb367a2e9453e9ee10a8d9c1650a69e06be
+#%global commit b5477fb367a2e9453e9ee10a8d9c1650a69e06be
 %global date 20240914
 
 %forgemeta
