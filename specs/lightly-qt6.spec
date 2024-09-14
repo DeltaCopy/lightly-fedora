@@ -1,3 +1,4 @@
+# Credits: hazel-bunny (https://github.com/hazel-bunny)
 %global style Lightly
 %global _style lightly
 %global dev Bali10050
@@ -11,7 +12,7 @@
 %forgemeta
 
 Name:           %{_style}-qt%{_qt_major_version}
-Version:        24.09
+Version:        24.09.0
 Release:        2%{?dist}
 Summary:        A modern style for qt applications
 License:        GPL-2.0-or-later
