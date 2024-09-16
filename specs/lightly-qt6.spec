@@ -13,7 +13,7 @@
 
 Name:           %{_style}-qt%{_qt_major_version}
 Version:        %{version}
-Release:        %{build_timestamp}
+Release:        1%{?dist}
 Summary:        A modern style for qt applications
 License:        GPL-2.0-or-later
 Group:          System/GUI/KDE
