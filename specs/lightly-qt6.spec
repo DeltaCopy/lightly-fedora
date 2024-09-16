@@ -1,18 +1,19 @@
 # Credits: hazel-bunny (https://github.com/hazel-bunny)
-%global style Lightly
-%global _style lightly
-%global dev Bali10050
-%global _qt_major_version 6
-
-%global forgeurl https://github.com/%{dev}/%{style}
-#%global commit b5477fb367a2e9453e9ee10a8d9c1650a69e06be
-%global date 20240914
+%define style Lightly
+%define _style lightly
+#define dev Bali10050
+%define dev DeltaCopy
+%define _qt_major_version 6
+%define forgeurl https://github.com/%{dev}/%{style}
+#%define commit b5477fb367a2e9453e9ee10a8d9c1650a69e06be
+%define build_timestamp %{lua: print(os.date("%Y%m%d"))}
+%define version 1.0.0_0_gb986e1eb
 
 %forgemeta
 
 Name:           %{_style}-qt%{_qt_major_version}
-Version:        24.09.0
-Release:        2%{?dist}
+Version:        %{version}
+Release:        %{build_timestamp}
 Summary:        A modern style for qt applications
 License:        GPL-2.0-or-later
 Group:          System/GUI/KDE
