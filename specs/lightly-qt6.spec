@@ -1,13 +1,12 @@
 # Credits: hazel-bunny (https://github.com/hazel-bunny)
 %define style Lightly
 %define _style lightly
-#define dev Bali10050
-%define dev DeltaCopy
+%define dev Bali10050
 %define _qt_major_version 6
 %define forgeurl https://github.com/%{dev}/%{style}
 #%define commit b5477fb367a2e9453e9ee10a8d9c1650a69e06be
-%define build_timestamp %{lua: print(os.date("%Y%m%d"))}
-%define version 1.0.0_0_gb986e1eb
+#%define build_timestamp %{lua: print(os.date("%Y%m%d"))}
+%define version 0.5.0.r0.g623f40b1
 
 %forgemeta
 
