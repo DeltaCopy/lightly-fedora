@@ -6,8 +6,7 @@
 %define forgeurl https://github.com/%{dev}/%{style}
 #%define commit b5477fb367a2e9453e9ee10a8d9c1650a69e06be
 #%define build_timestamp %{lua: print(os.date("%Y%m%d"))}
-%define version 0.5.0.r0.g623f40b1
-
+%define version 0.5.1.0_g4b4aa854
 %forgemeta
 
 Name:           %{_style}-qt%{_qt_major_version}
