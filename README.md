@@ -2,7 +2,7 @@
 
 All build specs credits go to hazel-bunny (https://github.com/hazel-bunny)
 
-Fedora Copr build: <https://copr.fedorainfracloud.org/coprs/deltacopy/lightly-qt6>
+Fedora Copr builds: <https://copr.fedorainfracloud.org/coprs/deltacopy/lightly-qt6/builds>
 
 Builds from src: https://github.com/Bali10050/Lightly
 
