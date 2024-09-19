@@ -4,7 +4,11 @@ All build specs credits go to hazel-bunny (https://github.com/hazel-bunny)
 
 Fedora Copr build: <https://copr.fedorainfracloud.org/coprs/deltacopy/Lightly>
 
-Builds from src taken from https://github.com/Bali10050/Lightly/archive/refs/tags/${release_tag}.tar.gz
+Builds from src: https://github.com/Bali10050/Lightly
+
+### Updating the build spec
+
+If a new release is published then update the line `%define release_tag tag_name` with the new tag name.
 
 #### Fedora Copr last build status
 
