@@ -3,10 +3,9 @@
 %define _style lightly
 %define dev Bali10050
 %define _qt_major_version 6
-%define forgeurl https://github.com/%{dev}/%{style}
-#%define commit b5477fb367a2e9453e9ee10a8d9c1650a69e06be
-#%define build_timestamp %{lua: print(os.date("%Y%m%d"))}
-%define version 0.5.1.0_g4b4aa854
+%define release_tag 0.5.1
+%define forgeurl https://github.com/%{dev}/%{style}/archive/refs/tags/%{release_tag}.tar.gz
+%define version %{release_tag}.0_g4b4aa854
 %forgemeta
 
 Name:           %{_style}-qt%{_qt_major_version}
