@@ -5,7 +5,7 @@
 %define _qt_major_version 6
 %define release_tag 0.5.1
 %define forgeurl https://github.com/%{dev}/%{style}/archive/refs/tags/%{release_tag}.tar.gz
-%define version %{release_tag}.0_g4b4aa854
+%define version %{release_tag}
 %forgemeta
 
 Name:           %{_style}-qt%{_qt_major_version}
