@@ -12,4 +12,4 @@ If a new release is published then update the line `%define release_tag tag_name
 
 #### Fedora Copr last build status
 
-[![Copr build status](https://copr.fedorainfracloud.org/coprs/deltacopy/lightly-qt6/package/lightly-qt6/status_image/last_build.png)](https://copr.fedorainfracloud.org/coprs/deltacopy/Lightly/package/lightly-qt6/)
+[![Copr build status](https://copr.fedorainfracloud.org/coprs/deltacopy/lightly-qt6/package/lightly-qt6/status_image/last_build.png)](https://copr.fedorainfracloud.org/coprs/deltacopy/lightly-qt6/package/lightly-qt6/)
