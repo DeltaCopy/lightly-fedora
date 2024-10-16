@@ -1,9 +1,10 @@
 # Credits: hazel-bunny (https://github.com/hazel-bunny)
+# This specfile is used insoi
 %define style Lightly
 %define _style lightly
 %define dev Bali10050
 %define _qt_major_version 6
-%define release_tag 0.5.2
+%define release_tag 0.5.3
 %define forgeurl https://github.com/%{dev}/%{style}/archive/refs/tags/%{release_tag}.tar.gz
 %define version %{release_tag}
 %forgemeta
