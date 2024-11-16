@@ -4,7 +4,7 @@
 %define _style lightly
 %define dev Bali10050
 %define _qt_major_version 6
-%define release_tag 0.5.6
+%define release_tag 0.5.7
 %define forgeurl https://github.com/%{dev}/%{style}/archive/refs/tags/%{release_tag}.tar.gz
 %define version %{release_tag}
 %forgemeta
