@@ -70,7 +70,7 @@ Lightly is a fork of breeze theme style that aims to be visually modern and mini
 %forgeautosetup -p1
 
 %build
-%cmake_kf6 -DQT_MAJOR_VERSION=%{_qt_major_version}
+%cmake_kf6 -DQT_MAJOR_VERSION=%{_qt_major_version} -DBUILD_QT5=OFF
 %cmake_build
 
 %install
