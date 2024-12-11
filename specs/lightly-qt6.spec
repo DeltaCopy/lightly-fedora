@@ -8,23 +8,22 @@
 %define qt5_version 5.15.2
 %define kf5_version 5.102.0
 %define release_tag 0.5.9
-%define forgeurl https://github.com/%{dev}/%{style}/archive/refs/tags/%{release_tag}.tar.gz
-%define version %{release_tag}
-%forgemeta
 
 Name:           %{_style}-qt%{_qt_major_version}
-Version:        %{version}
+Version:        %{release_tag}
 Release:        1%{?dist}
 Summary:        A modern style for qt applications
 License:        GPL-2.0-or-later
 Group:          System/GUI/KDE
 
-URL:            %{forgeurl}
-Source:         %{forgesource}
+URL:            https://github.com/%{dev}/%{style}
+Source0:        https://github.com/%{dev}/%{style}/archive/refs/tags/%{version}.tar.gz
 
 BuildRequires:  gcc-c++
 BuildRequires:  cmake >= 3.16
 BuildRequires:  extra-cmake-modules >= 5.240.0
+BuildRequires:  fdupes
+BuildRequires:  gettext
 
 # kf5
 BuildRequires:  kf%{_qt5_major_version}-rpm-macros
@@ -87,14 +86,19 @@ Obsoletes:      %{_style} <= %{version}
 Lightly is a fork of breeze theme style that aims to be visually modern and minimalistic.
 
 %prep
-%forgeautosetup -p1
+%autosetup -n %{style}-%{version} -p1
 
 %build
-%cmake_kf6 -DQT_MAJOR_VERSION=%{_qt_major_version} -DBUILD_QT5=OFF
+%cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DKDE_INSTALL_USE_QT_SYS_PATHS=ON
 %cmake_build
 
 %install
 %cmake_install
+
+%fdupes %{buildroot}/%{_prefix}
+
+%post   -p /sbin/ldconfig
+%postun -p /sbin/ldconfig
 
 %files
 %license COPYING
@@ -111,7 +115,7 @@ Lightly is a fork of breeze theme style that aims to be visually modern and mini
 %{_qt6_plugindir}/org.kde.kdecoration2.kcm/kcm_%{_style}decoration.so
 %{_qt6_plugindir}/styles/%{_style}%{_qt_major_version}.so
 %dir %{_kf5_qtplugindir}/styles
-%{_kf5_qtplugindir}/styles/%{_style}5.so
+%{_kf5_qtplugindir}/styles/%{_style}%{_qt5_major_version}.so
 
 %{_datadir}/applications/kcm_%{_style}decoration.desktop
 %{_datadir}/applications/%{_style}styleconfig.desktop
