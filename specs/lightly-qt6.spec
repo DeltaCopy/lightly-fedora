@@ -27,7 +27,7 @@ BuildRequires:  cmake >= 3.16
 BuildRequires:  extra-cmake-modules >= 5.240.0
 
 # kf5
-BuildRequires:  kf{_qt5_major_version}-rpm-macros
+BuildRequires:  kf%{_qt5_major_version}-rpm-macros
 
 BuildRequires:  kf%{_qt_major_version}-rpm-macros
 BuildRequires:  kf%{_qt_major_version}-filesystem
