@@ -7,7 +7,7 @@
 %define _style lightly
 %define version 0.5.9
 
-Name:           %{style}
+Name:           %{_style}-qt6
 Version:        %{version}
 Release:        0
 Summary:        A modern style for qt applications
@@ -64,6 +64,8 @@ BuildRequires:  cmake(Qt6Core) >= %{qt6_version}
 BuildRequires:  cmake(Qt6DBus) >= %{qt6_version}
 BuildRequires:  cmake(Qt6Quick) >= %{qt6_version}
 BuildRequires:  cmake(Qt6Widgets) >= %{qt6_version}
+
+BuildRequires:  cmake(KDecoration2) >= %{qt6_version}
 
 %description
 Lightly is a fork of breeze theme style that aims to be visually modern and minimalistic.
