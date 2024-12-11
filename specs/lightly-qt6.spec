@@ -1,5 +1,5 @@
 # Credits: hazel-bunny (https://github.com/hazel-bunny)
-# This specfile is used insoi
+
 %define style Lightly
 %define _style lightly
 %define dev Bali10050
