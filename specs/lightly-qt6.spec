@@ -55,6 +55,7 @@ BuildRequires:  cmake(KF%{_qt_major_version}Package)
 BuildRequires:  cmake(KF%{_qt_major_version}WindowSystem)
 
 #lightly5 dependencies
+BuildRequires:  cmake(KF%{_qt5_major_version}KCMUtils)
 BuildRequires:  cmake(KF%{_qt5_major_version}Config) >= %{kf5_version}
 BuildRequires:  cmake(KF%{_qt5_major_version}ConfigWidgets) >= %{kf5_version}
 BuildRequires:  cmake(KF%{_qt5_major_version}CoreAddons) >= %{kf5_version}
