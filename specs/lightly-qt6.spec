@@ -5,16 +5,16 @@
 %define dev Bali10050
 %define style Lightly
 %define _style lightly
-%define release_tag 0.5.9
+%define version 0.5.9
 
 Name:           %{style}
-Version:        %{release_tag}
+Version:        %{version}
 Release:        0
 Summary:        A modern style for qt applications
 License:        GPL-3.0-or-later
 Group:          System/GUI/KDE
 URL:            https://github.com/%{dev}/%{style}
-Source0:        https://github.com/%{dev}/%{style}/archive/refs/tags/%{version}.tar.gz
+Source0:        https://github.com/%{dev}/%{style}/archive/refs/tags/%v{version}.tar.gz
 BuildRequires:  cmake >= 3.16
 BuildRequires:  fdupes
 BuildRequires:  gettext
