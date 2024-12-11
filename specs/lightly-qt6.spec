@@ -5,7 +5,7 @@
 %define dev Bali10050
 %define style Lightly
 %define _style lightly
-%define release_tag 0.5.9 # this line gets updated automatically by Github Actions
+%define release_tag 0.5.9
 
 Name:           %{style}
 Version:        %{release_tag}
