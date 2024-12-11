@@ -18,22 +18,10 @@ Source0:        https://github.com/%{dev}/%{style}/archive/refs/tags/v%{version}
 BuildRequires:  cmake >= 3.16
 BuildRequires:  fdupes
 BuildRequires:  gettext
-%if 0%{?fedora} || 0%{?centos_version} || 0%{?rhel_version}
+
 BuildRequires:  extra-cmake-modules >= %{kf6_version}
 BuildRequires:  kf5-rpm-macros
 BuildRequires:  kf6-rpm-macros
-%elif 0%{?mageia}
-BuildRequires:  kf6-extra-cmake-modules >= %{kf6_version}
-BuildRequires:  kf5-macros
-BuildRequires:  kf6-macros
-
-%else
-#OpenSUSE
-BuildRequires:  kf6-extra-cmake-modules >= %{kf6_version}
-BuildRequires:  kf5-filesystem
-BuildRequires:  kf6-filesystem
-%endif
-BuildRequires:  pkgconfig
 
 #lightly5 dependencies
 BuildRequires:  cmake(KF5Config) >= %{kf5_version}
@@ -66,6 +54,13 @@ BuildRequires:  cmake(Qt6Quick) >= %{qt6_version}
 BuildRequires:  cmake(Qt6Widgets) >= %{qt6_version}
 
 BuildRequires:  cmake(KDecoration2) >= %{qt6_version}
+BuildRequires:  pkgconfig(x11-xcb)
+BuildRequires:  pkgconfig(xcb)
+
+BuildRequires:  kwin-devel
+BuildRequires:  libepoxy-devel
+BuildRequires:  kf6-kpackage-devel >= %{kf6_version}
+
 
 %description
 Lightly is a fork of breeze theme style that aims to be visually modern and minimalistic.
@@ -89,8 +84,6 @@ Lightly is a fork of breeze theme style that aims to be visually modern and mini
 %files
 %license COPYING
 %doc AUTHORS README.md
-
-%if 0%{?fedora} || 0%{?centos_version} || 0%{?rhel_version}
 
 %{_libdir}/lib%{_style}common5.so.*
 %{_libdir}/lib%{_style}common6.so.*
@@ -119,47 +112,6 @@ Lightly is a fork of breeze theme style that aims to be visually modern and mini
 %{_datadir}/color-schemes/%{style}.colors
 %{_libdir}/cmake/%{style}/
 
-
-%else
-#OpenSUSE
-
-%{_libdir}/lib%{_style}common5.so.*
-%{_libdir}/lib%{_style}common6.so.*
-%{_kf6_applicationsdir}/%{_style}styleconfig.desktop
-%{_kf6_applicationsdir}/kcm_%{_style}decoration.desktop
-%{_datadir}/kservices6/%{_style}decorationconfig.desktop
-%dir %{_kf6_plugindir}
-%dir %{_kf6_plugindir}/org.kde.kdecoration2.kcm
-%{_kf6_plugindir}/org.kde.kdecoration2.kcm/kcm_%{_style}decoration.so
-%dir %{_kf6_plugindir}/org.kde.kdecoration2/
-%{_kf6_plugindir}/org.kde.kdecoration2/org.kde.%{_style}.so
-%dir %{_kf6_plugindir}/kstyle_config
-%{_kf6_plugindir}/kstyle_config/%{_style}styleconfig.so
-%dir %{_kf5_plugindir}/styles
-%{_kf5_plugindir}/styles/%{_style}5.so
-%dir %{_kf6_plugindir}/styles
-%{_kf6_plugindir}/styles/%{_style}6.so
-%dir %{_kf6_sharedir}/kstyle
-%dir %{_kf6_sharedir}/kstyle/themes
-%{_kf6_sharedir}/kstyle/themes/%{_style}.themerc
-%{_kf6_bindir}/%{_style}-settings6
-%dir %{_kf6_iconsdir}/hicolor/scalable
-%dir %{_kf6_iconsdir}/hicolor/scalable/apps
-%{_kf6_iconsdir}/hicolor/scalable/apps/%{_style}-settings.svgz
-%dir %{_datadir}/color-schemes/
-%{_datadir}/color-schemes/%{style}.colors
-%{_kf6_libdir}/cmake/%{style}/
-
-%endif
-
-%if 0%{?fedora} || 0%{?centos_version} || 0%{?rhel_version}
-
 %changelog
 %autochangelog
 
-%else
-#OpenSUSE
-
-%changelog
-
-%endif
