@@ -14,7 +14,7 @@ Summary:        A modern style for qt applications
 License:        GPL-3.0-or-later
 Group:          System/GUI/KDE
 URL:            https://github.com/%{dev}/%{style}
-Source0:        https://github.com/%{dev}/%{style}/archive/refs/tags/%v{version}.tar.gz
+Source0:        https://github.com/%{dev}/%{style}/archive/refs/tags/v%{version}.tar.gz
 BuildRequires:  cmake >= 3.16
 BuildRequires:  fdupes
 BuildRequires:  gettext
