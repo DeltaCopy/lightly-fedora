@@ -7,7 +7,7 @@
 %define _qt5_major_version 5
 %define qt5_version 5.15.2
 %define kf5_version 5.102.0
-%define release_tag 0.5.10
+%define release_tag 0.5.9
 
 Name:           %{_style}-qt%{_qt_major_version}
 Version:        %{release_tag}
